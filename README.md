@@ -7,11 +7,11 @@
 ![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
 <p align="center">
-  <code>⚡ Simulator: LTspice</code> &nbsp;•&nbsp;
-  <code>📐 EDA: Electric VLSI 9.08</code> &nbsp;•&nbsp;
-  <code>🔬 Process: 180nm / 90nm / 65nm PTM</code> &nbsp;•&nbsp;
-  <code>🔋 Supply: 1.8V | 1.0V | 0.6V</code> &nbsp;•&nbsp;
-  <code>📜 License: MIT</code>
+  <code>⚡ SIMULATION&nbsp; / &nbsp;LTspice</code> &nbsp;◆&nbsp;
+  <code>📐 LAYOUT&nbsp; / &nbsp;Electric VLSI 9.08</code> &nbsp;◆&nbsp;
+  <code>🔬 NODES&nbsp; / &nbsp;180 · 90 · 65nm</code> &nbsp;◆&nbsp;
+  <code>🔋 VDD&nbsp; / &nbsp;1.8 · 1.0 · 0.6V</code> &nbsp;◆&nbsp;
+  <code>📜 LICENSE&nbsp; / &nbsp;MIT</code>
 </p>
 
 </div>
