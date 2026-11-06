@@ -6,8 +6,6 @@
 
 ![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
-<div align="center">
-
 <p align="center">
   <code>⚡ Simulator: LTspice</code> &nbsp;•&nbsp;
   <code>📐 EDA: Electric VLSI 9.08</code> &nbsp;•&nbsp;
