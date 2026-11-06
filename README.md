@@ -98,7 +98,7 @@ flowchart TB
 
 ---
 
-## 📐 Reference Circuit Schematics
+## 📐 Circuit Schematics
 
 The fundamental circuit topologies implemented in this project are shown below:
 
