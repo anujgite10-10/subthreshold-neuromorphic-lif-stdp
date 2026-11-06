@@ -6,7 +6,6 @@
 
 ![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
-<p align="left">
   <code>⚡ LTspice</code> &nbsp;│&nbsp;
   <code>📐 Electric VLSI 9.08</code> &nbsp;│&nbsp;
   <code>🔬 PTM [180 / 90 / 65nm]</code> &nbsp;│&nbsp;
