@@ -1,0 +1,2474 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Title: LIF{lay}-->
+<!-- Creator: Electric VLSI Design System version 9.08-->
+<!-- Date: Wed Oct 28, 2026 18:43:27-->
+<svg width="419" height="260" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="P-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="15" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="7" y="1" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="8" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="0" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="9" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="1" y="3" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="11" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="3" y="5" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="12" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="4" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="13" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="5" y="7" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="N-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="15" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="11" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+  <pattern id="N-Well" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="14" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="0" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="2" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="14" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="6" y="4" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="10" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+    <rect x="2" y="6" width="1" height="1" fill="rgb(139,99,46)"/>
+  </pattern>
+  <pattern id="P-Select" x="0" y="0" width="16" height="8" patternUnits="userSpaceOnUse">
+    <rect x="11" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="3" y="0" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="10" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="2" y="1" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="9" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="1" y="2" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="8" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="0" y="3" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="15" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="7" y="4" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="14" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="6" y="5" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="13" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="5" y="6" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="12" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+    <rect x="4" y="7" width="1" height="1" fill="rgb(255,255,0)"/>
+  </pattern>
+</defs>
+<g id="Layer-P-Well" fill="url(#P-Well)">
+<rect x="84" y="166.5" width="17" height="17" />
+<rect x="84" y="176.5" width="17" height="17" />
+<rect x="102" y="166.5" width="52" height="17" />
+<rect x="102" y="176.5" width="52" height="17" />
+<rect x="155" y="165.5" width="17" height="17" />
+<rect x="155" y="177.5" width="17" height="17" />
+<rect x="172" y="165.5" width="17" height="17" />
+<rect x="172" y="177.5" width="17" height="17" />
+<rect x="197" y="165.5" width="17" height="17" />
+<rect x="197" y="177.5" width="17" height="17" />
+<rect x="222" y="166.5" width="17" height="17" />
+<rect x="222" y="176.5" width="17" height="17" />
+<rect x="239" y="166.5" width="17" height="17" />
+<rect x="239" y="176.5" width="17" height="17" />
+<rect x="85" y="170" width="15" height="20" />
+<rect x="102" y="170" width="52" height="20" />
+<rect x="156" y="169" width="15" height="22" />
+<rect x="173" y="169" width="15" height="22" />
+<rect x="198" y="169" width="15" height="22" />
+<rect x="223" y="170" width="15" height="20" />
+<rect x="240" y="170" width="15" height="20" />
+<rect x="50" y="165" width="319" height="45" />
+<rect x="56.5" y="194.5" width="11" height="11" />
+<rect x="351.5" y="194.5" width="11" height="11" />
+<rect x="85" y="175" width="15" height="1.25" />
+<rect x="85" y="183.75" width="15" height="1.25" />
+<rect x="102" y="175" width="52" height="1.25" />
+<rect x="102" y="183.75" width="52" height="1.25" />
+<rect x="156" y="174" width="15" height="1.25" />
+<rect x="156" y="184.75" width="15" height="1.25" />
+<rect x="173" y="174" width="15" height="1.25" />
+<rect x="173" y="184.75" width="15" height="1.25" />
+<rect x="198" y="174" width="15" height="1.25" />
+<rect x="198" y="184.75" width="15" height="1.25" />
+<rect x="223" y="175" width="15" height="1.25" />
+<rect x="223" y="183.75" width="15" height="1.25" />
+<rect x="240" y="175" width="15" height="1.25" />
+<rect x="240" y="183.75" width="15" height="1.25" />
+</g>
+<g id="Layer-N-Well" fill="url(#N-Well)">
+<rect x="109.5" y="65.5" width="17" height="17" />
+<rect x="109.5" y="77.5" width="17" height="17" />
+<rect x="254.5" y="65.5" width="17" height="17" />
+<rect x="254.5" y="77.5" width="17" height="17" />
+<rect x="280.5" y="65.5" width="17" height="17" />
+<rect x="280.5" y="77.5" width="17" height="17" />
+<rect x="306.5" y="66.5" width="17" height="17" />
+<rect x="306.5" y="76.5" width="17" height="17" />
+<rect x="324.5" y="66.5" width="17" height="17" />
+<rect x="324.5" y="76.5" width="17" height="17" />
+<rect x="50" y="50" width="319" height="46" />
+<rect x="110" y="69" width="16" height="22" />
+<rect x="255" y="69" width="16" height="22" />
+<rect x="281" y="69" width="16" height="22" />
+<rect x="307" y="70" width="16" height="20" />
+<rect x="325" y="70" width="16" height="20" />
+<rect x="56.5" y="54.5" width="11" height="11" />
+<rect x="351.5" y="54.5" width="11" height="11" />
+<rect x="110" y="74" width="16" height="1.25" />
+<rect x="110" y="84.75" width="16" height="1.25" />
+<rect x="255" y="74" width="16" height="1.25" />
+<rect x="255" y="84.75" width="16" height="1.25" />
+<rect x="281" y="74" width="16" height="1.25" />
+<rect x="281" y="84.75" width="16" height="1.25" />
+<rect x="307" y="75" width="16" height="1.25" />
+<rect x="307" y="83.75" width="16" height="1.25" />
+<rect x="325" y="75" width="16" height="1.25" />
+<rect x="325" y="83.75" width="16" height="1.25" />
+</g>
+<g id="Layer-P-Select" fill="url(#P-Select)">
+<rect x="113.5" y="69.5" width="9" height="9" />
+<rect x="113.5" y="81.5" width="9" height="9" />
+<rect x="258.5" y="69.5" width="9" height="9" />
+<rect x="258.5" y="81.5" width="9" height="9" />
+<rect x="284.5" y="69.5" width="9" height="9" />
+<rect x="284.5" y="81.5" width="9" height="9" />
+<rect x="310.5" y="70.5" width="9" height="9" />
+<rect x="310.5" y="80.5" width="9" height="9" />
+<rect x="328.5" y="70.5" width="9" height="9" />
+<rect x="328.5" y="80.5" width="9" height="9" />
+<rect x="112.5" y="69" width="226" height="22" />
+<rect x="114" y="73" width="8" height="14" />
+<rect x="259" y="73" width="8" height="14" />
+<rect x="285" y="73" width="8" height="14" />
+<rect x="311" y="74" width="8" height="12" />
+<rect x="329" y="74" width="8" height="12" />
+<rect x="57.5" y="195.5" width="9" height="9" />
+<rect x="352.5" y="195.5" width="9" height="9" />
+<rect x="114" y="74" width="8" height="1.25" />
+<rect x="114" y="84.75" width="8" height="1.25" />
+<rect x="259" y="74" width="8" height="1.25" />
+<rect x="259" y="84.75" width="8" height="1.25" />
+<rect x="285" y="74" width="8" height="1.25" />
+<rect x="285" y="84.75" width="8" height="1.25" />
+<rect x="311" y="75" width="8" height="1.25" />
+<rect x="311" y="83.75" width="8" height="1.25" />
+<rect x="329" y="75" width="8" height="1.25" />
+<rect x="329" y="83.75" width="8" height="1.25" />
+</g>
+<g id="Layer-N-Select" fill="url(#N-Select)">
+<rect x="88" y="170.5" width="9" height="9" />
+<rect x="88" y="180.5" width="9" height="9" />
+<rect x="106" y="170.5" width="44" height="9" />
+<rect x="106" y="180.5" width="44" height="9" />
+<rect x="159" y="169.5" width="9" height="9" />
+<rect x="159" y="181.5" width="9" height="9" />
+<rect x="176" y="169.5" width="9" height="9" />
+<rect x="176" y="181.5" width="9" height="9" />
+<rect x="201" y="169.5" width="9" height="9" />
+<rect x="201" y="181.5" width="9" height="9" />
+<rect x="226" y="170.5" width="9" height="9" />
+<rect x="226" y="180.5" width="9" height="9" />
+<rect x="243" y="170.5" width="9" height="9" />
+<rect x="243" y="180.5" width="9" height="9" />
+<rect x="89" y="174" width="7" height="12" />
+<rect x="106" y="174" width="44" height="12" />
+<rect x="160" y="173" width="7" height="14" />
+<rect x="177" y="173" width="7" height="14" />
+<rect x="202" y="173" width="7" height="14" />
+<rect x="227" y="174" width="7" height="12" />
+<rect x="244" y="174" width="7" height="12" />
+<rect x="87.5" y="169" width="165" height="22" />
+<rect x="57.5" y="55.5" width="9" height="9" />
+<rect x="352.5" y="55.5" width="9" height="9" />
+<rect x="89" y="175" width="7" height="1.25" />
+<rect x="89" y="183.75" width="7" height="1.25" />
+<rect x="106" y="175" width="44" height="1.25" />
+<rect x="106" y="183.75" width="44" height="1.25" />
+<rect x="160" y="174" width="7" height="1.25" />
+<rect x="160" y="184.75" width="7" height="1.25" />
+<rect x="177" y="174" width="7" height="1.25" />
+<rect x="177" y="184.75" width="7" height="1.25" />
+<rect x="202" y="174" width="7" height="1.25" />
+<rect x="202" y="184.75" width="7" height="1.25" />
+<rect x="227" y="175" width="7" height="1.25" />
+<rect x="227" y="183.75" width="7" height="1.25" />
+<rect x="244" y="175" width="7" height="1.25" />
+<rect x="244" y="183.75" width="7" height="1.25" />
+</g>
+<g id="Layer-Poly-Cap" fill="rgb(0,0,0)">
+</g>
+<g id="Layer-P-Base" fill="url(#P-Base)">
+</g>
+<g id="Layer-P-Active" fill="rgb(107,226,96)" opacity="0.5">
+<rect x="115.5" y="71.5" width="5" height="5" />
+<rect x="115.5" y="83.5" width="5" height="5" />
+<rect x="260.5" y="71.5" width="5" height="5" />
+<rect x="260.5" y="83.5" width="5" height="5" />
+<rect x="286.5" y="71.5" width="5" height="5" />
+<rect x="286.5" y="83.5" width="5" height="5" />
+<rect x="312.5" y="72.5" width="5" height="5" />
+<rect x="312.5" y="82.5" width="5" height="5" />
+<rect x="330.5" y="72.5" width="5" height="5" />
+<rect x="330.5" y="82.5" width="5" height="5" />
+<rect x="116" y="75" width="4" height="10" />
+<rect x="261" y="75" width="4" height="10" />
+<rect x="287" y="75" width="4" height="10" />
+<rect x="313" y="76" width="4" height="8" />
+<rect x="331" y="76" width="4" height="8" />
+<rect x="116" y="74" width="4" height="1.25" />
+<rect x="116" y="84.75" width="4" height="1.25" />
+<rect x="261" y="74" width="4" height="1.25" />
+<rect x="261" y="84.75" width="4" height="1.25" />
+<rect x="287" y="74" width="4" height="1.25" />
+<rect x="287" y="84.75" width="4" height="1.25" />
+<rect x="313" y="75" width="4" height="1.25" />
+<rect x="313" y="83.75" width="4" height="1.25" />
+<rect x="331" y="75" width="4" height="1.25" />
+<rect x="331" y="83.75" width="4" height="1.25" />
+</g>
+<g id="Layer-N-Active" fill="rgb(107,226,96)" opacity="0.5">
+<rect x="90" y="172.5" width="5" height="5" />
+<rect x="90" y="182.5" width="5" height="5" />
+<rect x="108" y="172.5" width="40" height="5" />
+<rect x="108" y="182.5" width="40" height="5" />
+<rect x="161" y="171.5" width="5" height="5" />
+<rect x="161" y="183.5" width="5" height="5" />
+<rect x="178" y="171.5" width="5" height="5" />
+<rect x="178" y="183.5" width="5" height="5" />
+<rect x="203" y="171.5" width="5" height="5" />
+<rect x="203" y="183.5" width="5" height="5" />
+<rect x="228" y="172.5" width="5" height="5" />
+<rect x="228" y="182.5" width="5" height="5" />
+<rect x="245" y="172.5" width="5" height="5" />
+<rect x="245" y="182.5" width="5" height="5" />
+<rect x="91" y="176" width="3" height="8" />
+<rect x="108" y="176" width="40" height="8" />
+<rect x="162" y="175" width="3" height="10" />
+<rect x="179" y="175" width="3" height="10" />
+<rect x="204" y="175" width="3" height="10" />
+<rect x="229" y="176" width="3" height="8" />
+<rect x="246" y="176" width="3" height="8" />
+<rect x="59.5" y="57.5" width="5" height="5" />
+<rect x="354.5" y="57.5" width="5" height="5" />
+<rect x="91" y="175" width="3" height="1.25" />
+<rect x="91" y="183.75" width="3" height="1.25" />
+<rect x="108" y="175" width="40" height="1.25" />
+<rect x="108" y="183.75" width="40" height="1.25" />
+<rect x="162" y="174" width="3" height="1.25" />
+<rect x="162" y="184.75" width="3" height="1.25" />
+<rect x="179" y="174" width="3" height="1.25" />
+<rect x="179" y="184.75" width="3" height="1.25" />
+<rect x="204" y="174" width="3" height="1.25" />
+<rect x="204" y="184.75" width="3" height="1.25" />
+<rect x="229" y="175" width="3" height="1.25" />
+<rect x="229" y="183.75" width="3" height="1.25" />
+<rect x="246" y="175" width="3" height="1.25" />
+<rect x="246" y="183.75" width="3" height="1.25" />
+</g>
+<g id="Layer-P-Active-Well" fill="rgb(107,226,96)" opacity="0.5">
+<rect x="59.5" y="197.5" width="5" height="5" />
+<rect x="354.5" y="197.5" width="5" height="5" />
+</g>
+<g id="Layer-Thick-Active" fill="url(#Thick-Active)">
+</g>
+<g id="Layer-Polysilicon-1" fill="rgb(255,155,192)" opacity="0.5">
+<rect x="83.5" y="162.5" width="5" height="5" />
+<rect x="100.5" y="162.5" width="5" height="5" />
+<rect x="154.5" y="162.5" width="5" height="5" />
+<rect x="171.5" y="162.5" width="5" height="5" />
+<rect x="196.5" y="162.5" width="5" height="5" />
+<rect x="221.5" y="162.5" width="5" height="5" />
+<rect x="238.5" y="162.5" width="5" height="5" />
+<rect x="108.5" y="91.5" width="5" height="5" />
+<rect x="253.5" y="91.5" width="5" height="5" />
+<rect x="279.5" y="91.5" width="5" height="5" />
+<rect x="305.5" y="91.5" width="5" height="5" />
+<rect x="323.5" y="91.5" width="5" height="5" />
+<rect x="85" y="179" width="5" height="2" />
+<rect x="85" y="164" width="2" height="17" />
+<rect x="102" y="179" width="5" height="2" />
+<rect x="102" y="164" width="2" height="17" />
+<rect x="155" y="178" width="7" height="4" />
+<rect x="155" y="163" width="4" height="19" />
+<rect x="172" y="178" width="7" height="4" />
+<rect x="172" y="163" width="4" height="19" />
+<rect x="197" y="178" width="7" height="4" />
+<rect x="197" y="163" width="4" height="19" />
+<rect x="223" y="179" width="5" height="2" />
+<rect x="223" y="164" width="2" height="17" />
+<rect x="240" y="179" width="5" height="2" />
+<rect x="240" y="164" width="2" height="17" />
+<rect x="109" y="78" width="7" height="4" />
+<rect x="109" y="78" width="4" height="18" />
+<rect x="254" y="78" width="7" height="4" />
+<rect x="254" y="78" width="4" height="18" />
+<rect x="280" y="78" width="7" height="4" />
+<rect x="280" y="78" width="4" height="18" />
+<rect x="307" y="79" width="5" height="2" />
+<rect x="307" y="79" width="2" height="16" />
+<rect x="325" y="79" width="5" height="2" />
+<rect x="325" y="79" width="2" height="16" />
+</g>
+<g id="Layer-Polysilicon-2" fill="url(#Polysilicon-2)">
+</g>
+<g id="Layer-Transistor-Poly" fill="rgb(255,155,192)" opacity="0.5">
+<rect x="89" y="179" width="7" height="2" />
+<rect x="106" y="179" width="44" height="2" />
+<rect x="160" y="178" width="7" height="4" />
+<rect x="177" y="178" width="7" height="4" />
+<rect x="202" y="178" width="7" height="4" />
+<rect x="227" y="179" width="7" height="2" />
+<rect x="244" y="179" width="7" height="2" />
+<rect x="114" y="78" width="8" height="4" />
+<rect x="259" y="78" width="8" height="4" />
+<rect x="285" y="78" width="8" height="4" />
+<rect x="311" y="79" width="8" height="2" />
+<rect x="329" y="79" width="8" height="2" />
+</g>
+<g id="Layer-Metal-1" fill="rgb(96,209,255)" opacity="0.5">
+<rect x="90.5" y="173" width="4" height="4" />
+<rect x="90.5" y="183" width="4" height="4" />
+<rect x="84" y="163" width="4" height="4" />
+<text x="86" y="169" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  vlk
+</text>
+<rect x="90.5" y="138" width="4" height="4" />
+<text x="92.5" y="144" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  vm
+</text>
+<rect x="108.5" y="173" width="39" height="4" />
+<rect x="108.5" y="183" width="39" height="4" />
+<rect x="101" y="163" width="4" height="4" />
+<rect x="101" y="130" width="4" height="4" />
+<rect x="126" y="138" width="4" height="4" />
+<rect x="161.5" y="172" width="4" height="4" />
+<rect x="161.5" y="184" width="4" height="4" />
+<rect x="155" y="163" width="4" height="4" />
+<rect x="155" y="138" width="4" height="4" />
+<rect x="161.5" y="146" width="4" height="4" />
+<rect x="178.5" y="172" width="4" height="4" />
+<rect x="178.5" y="184" width="4" height="4" />
+<rect x="172" y="163" width="4" height="4" />
+<rect x="172" y="138" width="4" height="4" />
+<rect x="178.5" y="114" width="4" height="4" />
+<rect x="186" y="146" width="4" height="4" />
+<rect x="203.5" y="172" width="4" height="4" />
+<rect x="203.5" y="184" width="4" height="4" />
+<rect x="197" y="163" width="4" height="4" />
+<rect x="197" y="114" width="4" height="4" />
+<rect x="203.5" y="146" width="4" height="4" />
+<rect x="211" y="98" width="4" height="4" />
+<rect x="228.5" y="173" width="4" height="4" />
+<rect x="228.5" y="183" width="4" height="4" />
+<rect x="222" y="163" width="4" height="4" />
+<rect x="222" y="114" width="4" height="4" />
+<rect x="228.5" y="130" width="4" height="4" />
+<rect x="245.5" y="173" width="4" height="4" />
+<rect x="245.5" y="183" width="4" height="4" />
+<rect x="239" y="163" width="4" height="4" />
+<rect x="239" y="114" width="4" height="4" />
+<rect x="245.5" y="122" width="4" height="4" />
+<text x="247.5" y="128" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  spike
+</text>
+<rect x="116" y="72" width="4" height="4" />
+<rect x="116" y="84" width="4" height="4" />
+<rect x="109" y="92" width="4" height="4" />
+<rect x="109" y="138" width="4" height="4" />
+<rect x="116" y="106" width="4" height="4" />
+<rect x="261" y="72" width="4" height="4" />
+<rect x="261" y="84" width="4" height="4" />
+<rect x="254" y="92" width="4" height="4" />
+<rect x="254" y="138" width="4" height="4" />
+<rect x="261" y="114" width="4" height="4" />
+<rect x="269" y="106" width="4" height="4" />
+<rect x="287" y="72" width="4" height="4" />
+<rect x="287" y="84" width="4" height="4" />
+<rect x="280" y="92" width="4" height="4" />
+<rect x="280" y="114" width="4" height="4" />
+<rect x="287" y="106" width="4" height="4" />
+<rect x="295" y="154" width="4" height="4" />
+<rect x="313" y="73" width="4" height="4" />
+<text x="315" y="79" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  vwidth
+</text>
+<rect x="313" y="83" width="4" height="4" />
+<rect x="306" y="92" width="4" height="4" />
+<rect x="306" y="114" width="4" height="4" />
+<rect x="313" y="130" width="4" height="4" />
+<rect x="331" y="73" width="4" height="4" />
+<rect x="331" y="83" width="4" height="4" />
+<rect x="324" y="92" width="4" height="4" />
+<rect x="324" y="114" width="4" height="4" />
+<rect x="331" y="122" width="4" height="4" />
+<rect x="72" y="154" width="4" height="4" />
+<rect x="343" y="98" width="4" height="4" />
+<rect x="60" y="198" width="4" height="4" />
+<text x="62" y="204" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  gnd
+</text>
+<rect x="355" y="198" width="4" height="4" />
+<rect x="60" y="58" width="4" height="4" />
+<text x="62" y="64" fill="rgb(0,0,0)" font-size="8" style="text-anchor:middle">
+  vdd
+</text>
+<rect x="355" y="58" width="4" height="4" />
+<rect x="91" y="138.5" width="3" height="38" />
+<rect x="91" y="183.5" width="3" height="18" />
+<rect x="101.5" y="130.5" width="3" height="36" />
+<rect x="126.5" y="138.5" width="3" height="38" />
+<rect x="126.5" y="183.5" width="3" height="18" />
+<rect x="155.5" y="138.5" width="3" height="28" />
+<rect x="162" y="146.5" width="3" height="29" />
+<rect x="162" y="184.5" width="3" height="17" />
+<rect x="172.5" y="138.5" width="3" height="28" />
+<rect x="179" y="114.5" width="3" height="61" />
+<rect x="179" y="184.5" width="10.5" height="3" />
+<rect x="186.5" y="146.5" width="3" height="41" />
+<rect x="197.5" y="114.5" width="3" height="52" />
+<rect x="204" y="146.5" width="3" height="29" />
+<rect x="204" y="184.5" width="10.5" height="3" />
+<rect x="211.5" y="98.5" width="3" height="89" />
+<rect x="222.5" y="114.5" width="3" height="52" />
+<rect x="229" y="130.5" width="3" height="46" />
+<rect x="229" y="183.5" width="3" height="18" />
+<rect x="239.5" y="114.5" width="3" height="52" />
+<rect x="246" y="122.5" width="3" height="54" />
+<rect x="246" y="183.5" width="3" height="18" />
+<rect x="109.5" y="92.5" width="3" height="49" />
+<rect x="116.5" y="84.5" width="3" height="25" />
+<rect x="116.5" y="58.5" width="3" height="17" />
+<rect x="254.5" y="92.5" width="3" height="49" />
+<rect x="261.5" y="84.5" width="3" height="33" />
+<rect x="261.5" y="72.5" width="11" height="3" />
+<rect x="269.5" y="72.5" width="3" height="37" />
+<rect x="280.5" y="92.5" width="3" height="25" />
+<rect x="287.5" y="84.5" width="3" height="25" />
+<rect x="287.5" y="72.5" width="11" height="3" />
+<rect x="295.5" y="72.5" width="3" height="85" />
+<rect x="306.5" y="92.5" width="3" height="25" />
+<rect x="313.5" y="83.5" width="3" height="50" />
+<rect x="324.5" y="92.5" width="3" height="25" />
+<rect x="331.5" y="83.5" width="3" height="42" />
+<rect x="331.5" y="58.5" width="3" height="18" />
+<rect x="72.5" y="154.5" width="3" height="47" />
+<rect x="343.5" y="58.5" width="3" height="43" />
+<rect x="60.5" y="198.5" width="15" height="3" />
+<rect x="72.5" y="198.5" width="21.5" height="3" />
+<rect x="91" y="198.5" width="38.5" height="3" />
+<rect x="126.5" y="198.5" width="38.5" height="3" />
+<rect x="162" y="198.5" width="70" height="3" />
+<rect x="229" y="198.5" width="20" height="3" />
+<rect x="246" y="198.5" width="112.5" height="3" />
+<rect x="60.5" y="58.5" width="59" height="3" />
+<rect x="116.5" y="58.5" width="218" height="3" />
+<rect x="331.5" y="58.5" width="15" height="3" />
+<rect x="343.5" y="58.5" width="15" height="3" />
+<text x="189.75" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="211.5" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="232.5" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="252" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="272.5" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="295" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="317" y="118" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vo
+</text>
+<text x="166.75" y="134" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vrst
+</text>
+<text x="272.75" y="134" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  vrst
+</text>
+<text x="194.5" y="110" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  x
+</text>
+<text x="280" y="110" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  x
+</text>
+<text x="175.75" y="150" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  y
+</text>
+<text x="196.75" y="150" fill="rgb(0,0,0)" font-size="4" style="text-anchor:middle">
+  y
+</text>
+</g>
+<g id="Layer-Metal-2" fill="rgb(224,95,255)" opacity="0.5">
+<rect x="90.5" y="138" width="4" height="4" />
+<rect x="101" y="130" width="4" height="4" />
+<rect x="126" y="138" width="4" height="4" />
+<rect x="155" y="138" width="4" height="4" />
+<rect x="161.5" y="146" width="4" height="4" />
+<rect x="172" y="138" width="4" height="4" />
+<rect x="178.5" y="114" width="4" height="4" />
+<rect x="186" y="146" width="4" height="4" />
+<rect x="197" y="114" width="4" height="4" />
+<rect x="203.5" y="146" width="4" height="4" />
+<rect x="211" y="98" width="4" height="4" />
+<rect x="222" y="114" width="4" height="4" />
+<rect x="228.5" y="130" width="4" height="4" />
+<rect x="239" y="114" width="4" height="4" />
+<rect x="245.5" y="122" width="4" height="4" />
+<rect x="109" y="138" width="4" height="4" />
+<rect x="116" y="106" width="4" height="4" />
+<rect x="254" y="138" width="4" height="4" />
+<rect x="261" y="114" width="4" height="4" />
+<rect x="269" y="106" width="4" height="4" />
+<rect x="280" y="114" width="4" height="4" />
+<rect x="287" y="106" width="4" height="4" />
+<rect x="295" y="154" width="4" height="4" />
+<rect x="306" y="114" width="4" height="4" />
+<rect x="313" y="130" width="4" height="4" />
+<rect x="324" y="114" width="4" height="4" />
+<rect x="331" y="122" width="4" height="4" />
+<rect x="72" y="154" width="4" height="4" />
+<rect x="343" y="98" width="4" height="4" />
+<rect x="72.5" y="154.5" width="226" height="3" />
+<rect x="91" y="138.5" width="21.5" height="3" />
+<rect x="109.5" y="138.5" width="20" height="3" />
+<rect x="126.5" y="138.5" width="32" height="3" />
+<rect x="155.5" y="138.5" width="20" height="3" />
+<rect x="172.5" y="138.5" width="85" height="3" />
+<rect x="246" y="122.5" width="88.5" height="3" />
+<rect x="211.5" y="98.5" width="135" height="3" />
+<rect x="179" y="114.5" width="21.5" height="3" />
+<rect x="197.5" y="114.5" width="28" height="3" />
+<rect x="222.5" y="114.5" width="20" height="3" />
+<rect x="239.5" y="114.5" width="25" height="3" />
+<rect x="261.5" y="114.5" width="22" height="3" />
+<rect x="280.5" y="114.5" width="29" height="3" />
+<rect x="306.5" y="114.5" width="21" height="3" />
+<rect x="101.5" y="130.5" width="130.5" height="3" />
+<rect x="229" y="130.5" width="87.5" height="3" />
+<rect x="116.5" y="106.5" width="156" height="3" />
+<rect x="269.5" y="106.5" width="21" height="3" />
+<rect x="162" y="146.5" width="27.5" height="3" />
+<rect x="186.5" y="146.5" width="20.5" height="3" />
+</g>
+<g id="Layer-Metal-3" fill="rgb(247,251,20)" opacity="0.5">
+</g>
+<g id="Layer-Metal-4" fill="url(#Metal-4)">
+</g>
+<g id="Layer-Metal-5" fill="url(#Metal-5)">
+</g>
+<g id="Layer-Metal-6" fill="url(#Metal-6)">
+</g>
+<g id="Layer-Passivation" fill="url(#Passivation)">
+</g>
+<g id="Layer-Silicide-Block" fill="url(#Silicide-Block)">
+</g>
+<g id="Layer-Pad-Frame" fill="rgb(255,0,0)">
+</g>
+<g id="Layer-Hi-Res" fill="url(#Hi-Res)">
+</g>
+<g id="Layer-Poly-Cut" fill="rgb(100,100,100)">
+<rect x="85" y="164" width="2" height="2" />
+<rect x="102" y="164" width="2" height="2" />
+<rect x="156" y="164" width="2" height="2" />
+<rect x="173" y="164" width="2" height="2" />
+<rect x="198" y="164" width="2" height="2" />
+<rect x="223" y="164" width="2" height="2" />
+<rect x="240" y="164" width="2" height="2" />
+<rect x="110" y="93" width="2" height="2" />
+<rect x="255" y="93" width="2" height="2" />
+<rect x="281" y="93" width="2" height="2" />
+<rect x="307" y="93" width="2" height="2" />
+<rect x="325" y="93" width="2" height="2" />
+</g>
+<g id="Layer-Active-Cut" fill="rgb(100,100,100)">
+<rect x="91.5" y="174" width="2" height="2" />
+<rect x="91.5" y="184" width="2" height="2" />
+<rect x="109.5" y="174" width="2" height="2" />
+<rect x="114.5" y="174" width="2" height="2" />
+<rect x="119.5" y="174" width="2" height="2" />
+<rect x="124.5" y="174" width="2" height="2" />
+<rect x="129.5" y="174" width="2" height="2" />
+<rect x="134.5" y="174" width="2" height="2" />
+<rect x="139.5" y="174" width="2" height="2" />
+<rect x="144.5" y="174" width="2" height="2" />
+<rect x="109.5" y="184" width="2" height="2" />
+<rect x="114.5" y="184" width="2" height="2" />
+<rect x="119.5" y="184" width="2" height="2" />
+<rect x="124.5" y="184" width="2" height="2" />
+<rect x="129.5" y="184" width="2" height="2" />
+<rect x="134.5" y="184" width="2" height="2" />
+<rect x="139.5" y="184" width="2" height="2" />
+<rect x="144.5" y="184" width="2" height="2" />
+<rect x="162.5" y="173" width="2" height="2" />
+<rect x="162.5" y="185" width="2" height="2" />
+<rect x="179.5" y="173" width="2" height="2" />
+<rect x="179.5" y="185" width="2" height="2" />
+<rect x="204.5" y="173" width="2" height="2" />
+<rect x="204.5" y="185" width="2" height="2" />
+<rect x="229.5" y="174" width="2" height="2" />
+<rect x="229.5" y="184" width="2" height="2" />
+<rect x="246.5" y="174" width="2" height="2" />
+<rect x="246.5" y="184" width="2" height="2" />
+<rect x="117" y="73" width="2" height="2" />
+<rect x="117" y="85" width="2" height="2" />
+<rect x="262" y="73" width="2" height="2" />
+<rect x="262" y="85" width="2" height="2" />
+<rect x="288" y="73" width="2" height="2" />
+<rect x="288" y="85" width="2" height="2" />
+<rect x="314" y="74" width="2" height="2" />
+<rect x="314" y="84" width="2" height="2" />
+<rect x="332" y="74" width="2" height="2" />
+<rect x="332" y="84" width="2" height="2" />
+<rect x="61" y="199" width="2" height="2" />
+<rect x="356" y="199" width="2" height="2" />
+<rect x="61" y="59" width="2" height="2" />
+<rect x="356" y="59" width="2" height="2" />
+</g>
+<g id="Layer-Via1" fill="rgb(180,180,180)">
+<rect x="91.5" y="139" width="2" height="2" />
+<rect x="102" y="131" width="2" height="2" />
+<rect x="127" y="139" width="2" height="2" />
+<rect x="156" y="139" width="2" height="2" />
+<rect x="162.5" y="147" width="2" height="2" />
+<rect x="173" y="139" width="2" height="2" />
+<rect x="179.5" y="115" width="2" height="2" />
+<rect x="187" y="147" width="2" height="2" />
+<rect x="198" y="115" width="2" height="2" />
+<rect x="204.5" y="147" width="2" height="2" />
+<rect x="212" y="99" width="2" height="2" />
+<rect x="223" y="115" width="2" height="2" />
+<rect x="229.5" y="131" width="2" height="2" />
+<rect x="240" y="115" width="2" height="2" />
+<rect x="246.5" y="123" width="2" height="2" />
+<rect x="110" y="139" width="2" height="2" />
+<rect x="117" y="107" width="2" height="2" />
+<rect x="255" y="139" width="2" height="2" />
+<rect x="262" y="115" width="2" height="2" />
+<rect x="270" y="107" width="2" height="2" />
+<rect x="281" y="115" width="2" height="2" />
+<rect x="288" y="107" width="2" height="2" />
+<rect x="296" y="155" width="2" height="2" />
+<rect x="307" y="115" width="2" height="2" />
+<rect x="314" y="131" width="2" height="2" />
+<rect x="325" y="115" width="2" height="2" />
+<rect x="332" y="123" width="2" height="2" />
+<rect x="73" y="155" width="2" height="2" />
+<rect x="344" y="99" width="2" height="2" />
+</g>
+<g id="Layer-Via2" fill="rgb(180,180,180)">
+</g>
+<g id="Layer-Via3" fill="rgb(180,180,180)">
+</g>
+<g id="Layer-Via4" fill="rgb(180,180,180)">
+</g>
+<g id="Layer-Via5" fill="rgb(180,180,180)">
+</g>
+
+</svg>

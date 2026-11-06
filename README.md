@@ -4,7 +4,7 @@
 
 ### Sub-Threshold CMOS Neuromorphic Processing Unit with Bio-Inspired Auditory Feature Extraction, STDP Synaptic Plasticity, Technology Scaling (180nm / 90nm / 65nm), Ultra-Low Voltage (0.6V) Optimization, and Full Custom Electric VLSI Layout
 
-![STDP Physical Layout Banner](assets/layout_STDP.png)
+![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
 [![Platform](https://img.shields.io/badge/Simulator-LTspice-blue.svg)](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)
 [![EDA](https://img.shields.io/badge/EDA-Electric%20VLSI%209.08-green.svg)](https://www.gnu.org/software/electric/)
