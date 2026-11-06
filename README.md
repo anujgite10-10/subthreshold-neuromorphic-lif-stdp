@@ -6,17 +6,34 @@
 
 ![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
-<p align="center">
-  <strong>Simulation & Design</strong><br>
-  <code>LTspice</code> &nbsp;•&nbsp; <code>Electric VLSI 9.08</code>
-</p>
+<div align="center">
 
-<p align="center">
-  <strong>Technology & Implementation</strong><br>
-  <code>180nm / 90nm / 65nm PTM</code> &nbsp;•&nbsp;
-  <code>1.8V / 1.0V / 0.6V</code> &nbsp;•&nbsp;
-  <code>MIT License</code>
-</p>
+### ⚡ CMOS NEUROMORPHIC DESIGN
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>🖥 SIMULATION</strong><br>
+      <code>LTspice</code>
+    </td>
+    <td align="center" width="50%">
+      <strong>📐 LAYOUT DESIGN</strong><br>
+      <code>Electric VLSI 9.08</code>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>🔬 TECHNOLOGY NODES</strong><br>
+      <code>180nm</code> · <code>90nm</code> · <code>65nm</code>
+    </td>
+    <td align="center">
+      <strong>⚡ SUPPLY VOLTAGES</strong><br>
+      <code>1.8V</code> · <code>1.0V</code> · <code>0.6V</code>
+    </td>
+  </tr>
+</table>
+
+<sub>OPEN-SOURCE PROJECT &nbsp;•&nbsp; MIT LICENSE</sub>
 
 </div>
 
