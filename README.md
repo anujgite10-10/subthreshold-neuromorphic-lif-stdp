@@ -1,210 +1,334 @@
+<div align="center">
+
 # Neuromorphic VLSI: Leaky Integrate-and-Fire (LIF) Neuron & STDP Learning Synapse
 
-A subthreshold CMOS neuromorphic processing core implementing a 12-transistor Leaky Integrate-and-Fire (LIF) neuron, bio-inspired auditory signal processing, and Spike-Timing-Dependent Plasticity (STDP) synaptic weight update. Designed and characterized across three technology generations (180nm, 90nm, and 65nm PTM) with custom physical layouts developed in Electric VLSI.
+### Sub-Threshold CMOS Neuromorphic Processing Unit with Bio-Inspired Auditory Feature Extraction, STDP Synaptic Plasticity, Technology Scaling (180nm / 90nm / 65nm), Ultra-Low Voltage (0.6V) Optimization, and Full Custom Electric VLSI Layout
 
-![STDP Synapse Physical Layout](assets/layout_STDP.svg)
+![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
----
+<p align="center">
+  <code>⚡ Simulator: LTspice</code> &nbsp;•&nbsp;
+  <code>📐 EDA: Electric VLSI 9.08</code> &nbsp;•&nbsp;
+  <code>🔬 Process: 180nm / 90nm / 65nm PTM</code> &nbsp;•&nbsp;
+  <code>🔋 Supply: 1.8V | 1.0V | 0.6V</code> &nbsp;•&nbsp;
+  <code>📜 License: MIT</code>
+</p>
 
-## Technical Specifications
-
-| Parameter | 180nm Baseline (Nominal) | 180nm Baseline (Scaled) | 180nm Optimized (Ultra-Low Power) | 90nm Scaled | 65nm Scaled |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Supply Voltage ($V_{DD}$)** | 1.8 V | 1.0 V | **0.6 V** ($-67\%$) | 1.2 V | 1.0 V |
-| **Leak Bias ($V_{lk}$)** | 474 mV | 500 mV | 518 mV | Scaled | Scaled |
-| **Pulse-Width Supply ($V_{width}$)** | 1.62 V | 0.90 V | 0.60 V | Scaled | Scaled |
-| **Reset Switch ($W_{M2}/L_{M2}$)** | 250 nm / 200 nm | 250 nm / 200 nm | **4.0 µm / 200 nm** ($16\times$ width) | Scaled | Scaled |
-| **Schmitt Channel Length ($L_{Schmitt}$)** | 200 nm | 200 nm | **400 nm** ($2\times$ length) | Scaled | Scaled |
-| **Membrane Capacitance ($C_m$)** | 10 nF / 300 nF | 300 nF | 25.3 nF | 10 nF | 10 nF |
-| **Synaptic Weight Cap ($C_w$)** | 30 nF | 30 nF | — | 30 nF | 30 nF |
-| **Trace Capacitors ($C_1, C_2$)** | 2.2 nF | 2.2 nF | — | 2.2 nF | 2.2 nF |
-| **Operating Regime** | Subthreshold / Weak Inversion | Subthreshold | Deep Subthreshold | Subthreshold | Subthreshold |
-| **Physical Layout** | SCMOS (`mocmos`) | — | — | — | — |
+</div>
 
 ---
 
-## Architecture
+## 📖 Table of Contents
 
-The system models the auditory pathway and synaptic learning through three interconnected subsystems:
+- [Overview & Architecture](#-overview--architecture)
+- [Reference Circuit Schematics](#-reference-circuit-schematics)
+- [1. Baseline LIF Neuron (180nm @ 1.8V & 1.0V)](#1-baseline-lif-neuron-180nm--180v--10v)
+- [2. Auditory Feature Extraction & Neural Coding](#2-auditory-feature-extraction--neural-coding)
+  - [2.1 Toneburst Response](#21-toneburst-response-50ms--1khz)
+  - [2.2 Rate-Level Dynamic Range (Current Sweep)](#22-rate-level-dynamic-range-intensity-sweep)
+  - [2.3 Amplitude Modulation (AM) Phase-Locking](#23-amplitude-modulation-am-phase-locking)
+- [3. Spike-Timing-Dependent Plasticity (STDP) Learning Synapse](#3-spike-timing-dependent-plasticity-stdp-learning-synapse)
+- [4. Low-Voltage Optimization (0.6V Ultra-Low Power)](#4-low-voltage-optimization-06v-ultra-low-power)
+- [5. Technology Scaling (180nm → 90nm → 65nm)](#5-technology-scaling-180nm--90nm--65nm)
+- [6. Physical Layout Gallery (Electric VLSI)](#6-physical-layout-gallery-electric-vlsi)
+- [Repository Structure](#-repository-structure)
+- [Quick Start: Simulation & Reproduction](#-quick-start-simulation--reproduction)
+- [References](#-references)
+
+---
+
+## 🔬 Overview & Architecture
+
+This repository presents the end-to-end design, SPICE modeling, auditory validation, low-voltage optimization, and physical layout of an analog **neuromorphic processing core**. The architecture is inspired by **Yang et al. (ISLPED 2021)** and realizes:
+
+1. **Leaky Integrate-and-Fire (LIF) Neuron (12 Transistors)**: Employs a low-power Schmitt trigger with positive feedback hysteresis for sharp, rail-to-rail action potential generation and an adaptive pulse-width inverter to control refractory reset.
+2. **Bio-Inspired Auditory Front-End**: Implements behavioral cochlear hair-cell processing (half-wave rectification, raised-cosine onset/offset ramps, envelope detection) to simulate acoustic tonebursts, amplitude modulation (AM), and intensity sweeps.
+3. **STDP Learning Synapse (11-Transistor OTA + Trace Generators)**: Implements Spike-Timing-Dependent Plasticity using dual exponential trace decaying capacitors and a differential Operational Transconductance Amplifier (OTA) to update non-volatile weight capacitance ($C_w = 30\text{ nF}$).
+4. **0.6V Subthreshold Optimization**: Successfully scales supply voltage down by $3\times$ (from $1.8\text{ V}$ down to $0.6\text{ V}$) through deliberate transistor geometry optimization ($L_{Schmitt} = 400\text{ nm}$, $W_{Reset} = 4\ \mu\text{m}$).
+5. **Multi-Node Technology Scaling**: Validated on BSIM3v3 Predictive Technology Models (PTM) across **180nm**, **90nm**, and **65nm** nodes.
+6. **Full Custom CMOS Layout**: Complete hierarchical layout created in **Electric VLSI** adhering to MOSIS scalable CMOS (`mocmos`) design rules.
+
+### 🔄 End-to-End Neuromorphic Signal Pipeline
 
 ```mermaid
-flowchart LR
-    subgraph FRONTEND["Auditory Front-End (Cochlear Model)"]
-        direction TB
-        Stim["Acoustic Input\n(Toneburst / AM Envelope)"] --> IHC["Inner Hair Cell\nHalf-Wave Rectifier: max(sin 2π·fc·t, 0)"]
-        IHC --> Ramp["Raised-Cosine Shaping\nAttack / Decay (TR = 5ms)"]
-        Ramp --> Iin["I_in(t)"]
+flowchart TB
+    subgraph AUD["🎧 Bio-Inspired Auditory Front-End (Cochlear Model)"]
+        Stim["Acoustic Stimulus (Toneburst / AM Envelope)"]
+        HWR["Inner Hair Cell Model: max(sin 2π·fc·t, 0)"]
+        RC["Raised-Cosine Envelope Shaping (TR = 5ms)"]
+        Iin["Auditory Synaptic Current I_in(t)"]
+        Stim --> HWR --> RC --> Iin
     end
 
-    subgraph NEURON["12T LIF Neuron Core"]
-        direction TB
-        Iin --> Cm["Membrane Capacitor\nCm"]
-        Mleak["Subthreshold Leak M1\nGate = Vlk"] -.-> Cm
-        Cm --> ST["6T Schmitt Trigger\nHysteresis Window"]
-        ST --> Vo["Internal Inverter Node vo"]
-        Vo --> InvP["Starved Inverter\nSupply = Vwidth"]
-        Vo --> InvO["Output Buffer\nSupply = VDD"]
-        InvP --> Mrst["Reset Switch M2\nRefractory Discharge"]
-        Mrst -.-> Cm
-        InvO --> Spike["Action Potential (spike)"]
+    subgraph LIF["⚡ 12-Transistor Leaky Integrate-and-Fire (LIF) Neuron"]
+        MemNode["Membrane Node vm (Capacitor Cm)"]
+        Leak["Subthreshold Leak M1 (Gate = Vlk)"]
+        ST["6T Schmitt Trigger with Hysteresis (MPF, MNF)"]
+        Vo["Internal Inverted Node vo"]
+        PW["Starved Reset Inverter (MPW, MNW, Gate = Vwidth)"]
+        OutInv["Output Buffer Inverter (MPO, MNO)"]
+        ResetSwitch["NMOS Reset Switch M2"]
+        SpikeOut["Action Potential Output (spike)"]
+
+        MemNode --> ST
+        ST --> Vo
+        Vo --> PW
+        Vo --> OutInv
+        PW -->|"vrst reset pulse"| ResetSwitch
+        ResetSwitch -.->|"Refractory discharge"| MemNode
+        Leak -.->|"Subthreshold leak"| MemNode
+        OutInv --> SpikeOut
     end
 
-    subgraph SYNAPSE["STDP Plasticity Engine"]
-        direction TB
-        PreSpike["Pre-Spike"] --> C1["Pre-Trace Cap C1\nDecay: Vtau,pre"]
-        PostSpike["Post-Spike"] --> C2["Post-Trace Cap C2\nDecay: Vtau,post"]
-        C1 --> OTA1["OTA U1 (11T)\nGated by Post-Spike"]
-        C2 --> OTA2["OTA U2 (11T)\nGated by Pre-Spike"]
-        OTA1 -->|"+Δw (LTP)"| Cw["Weight Capacitor\nCw (Vw)"]
-        OTA2 -->|"-Δw (LTD)"| Cw
+    subgraph STDP_BLOCK["🧠 STDP Synaptic Learning Block"]
+        PreTrace["Pre-Synaptic Trace C1 (Decay via Vtau,pre)"]
+        PostTrace["Post-Synaptic Trace C2 (Decay via Vtau,post)"]
+        OTA1["OTA U1 (11T): Sampled on Post-Spike"]
+        OTA2["OTA U2 (11T): Sampled on Pre-Spike"]
+        WeightCap["Synaptic Weight Capacitor Cw (Vw)"]
+
+        PreTrace --> OTA1
+        PostTrace --> OTA2
+        OTA1 -->|"+Δw (LTP: Pre before Post)"| WeightCap
+        OTA2 -->|"-Δw (LTD: Post before Pre)"| WeightCap
     end
 
-    Spike -.-> PreSpike
-    Spike -.-> PostSpike
+    Iin --> MemNode
+    SpikeOut -.->|"Pre-spike pulse"| PreTrace
+    SpikeOut -.->|"Post-spike pulse"| PostTrace
 ```
 
 ---
 
-## Circuit Topologies
+## 📐 Circuit Schematics
 
-The topologies follow the subthreshold architectures introduced by Yang et al. (ISLPED 2021).
+The fundamental circuit topologies implemented in this project are shown below:
 
-![Reference Circuit Schematics](assets/circuit_schematics_paper.png)
-*Fig. 1: 12-transistor Leaky Integrate-and-Fire neuron schematic. Fig. 2: (a) STDP synaptic circuit with capacitive trace generators; (b) 11-transistor differential Operational Transconductance Amplifier (OTA).*
+<div align="center">
+  <img src="assets/circuit_schematics_paper.png" alt="Reference Schematics from Yang et al." width="850"/>
+  <p><em>Fig. 1: 12-Transistor LIF Spiking Neuron & Fig. 2: (a) STDP Synapse with trace generators, (b) 11-Transistor Operational Transconductance Amplifier (OTA).</em></p>
+</div>
 
-### 1. 12-Transistor LIF Spiking Neuron
-- **Integration**: Injected current charges $C_m$. A constant subthreshold gate bias $V_{lk}$ on NMOS $M_1$ sets a quiescent leakage current:
-  $$I_{leak} \approx I_0 \cdot \exp\left(\frac{V_{lk} - V_{th}}{n \cdot U_T}\right)$$
-- **Hysteresis Switching**: Formed by stacked PMOS ($M_{P1}, M_{P2}$) and NMOS ($M_{N1}, M_{N2}$) with positive feedback devices $M_{PF}$ and $M_{NF}$. When $V_m$ crosses the upper threshold, internal node $v_o$ transitions sharply to ground.
-- **Refractory Reset**: A starved pulse-width inverter ($M_{PW}, M_{NW}$) powered by $V_{width}$ delays the inverted edge to generate pulse $V_{rst}$. NMOS switch $M_2$ pulls $V_m$ to ground, resetting the integration cycle.
-- **Buffering**: Output inverter ($M_{PO}, M_{NO}$) decouples the core node from load capacitance to output clean rail-to-rail spikes.
-
-### 2. 11-Transistor OTA & STDP Learning
-- **Differential Pair ($M_6, M_7$)**: Biased by tail source $M_8$ ($V_c$). Senses the differential potential between decaying trace voltage and reference potential.
-- **Current Mirrors ($M_1-M_3, M_9-M_{10}$)**: Mirrors bidirectional current onto synaptic capacitor $C_w$:
-  $$I_w = I(M_7) - I(M_6)$$
-- **Spike Gating ($M_4, M_{11}$)**: The OTA is powered only during the spike coincidence window, holding static standby power to near zero.
-
----
-
-## Simulation Results & Verification
-
-All simulations were executed in LTspice with BSIM3v3 Predictive Technology Models (PTM) using strict convergence options (`.options plotwinsize=0`).
-
-### 1. Baseline LIF Neuron (180nm @ 1.8V)
-
-Under stepped pulse excitation ($V_{in} \in \{2.7\text{ V}, 3.6\text{ V}, 4.5\text{ V}\}$, $R_{in} = 910\text{ k}\Omega$, $C_m = 300\text{ nF}$):
-
-| Schematic (`LIF_R2_fig10.asc`) | Waveforms (`LIF_R2_fig10.raw`) |
-| :---: | :---: |
-| ![LIF Baseline Schematic](assets/01_lif_baseline_sch.png) | ![LIF Baseline Waveforms](assets/01_lif_baseline_plot.png) |
-
-- **Top**: Output spikes $V(spike)$ reaching 1.8V rail-to-rail.
-- **Middle**: Stepped input excitation $V(vin)$.
-- **Bottom**: Membrane potential $V(vm)$ showing clean subthreshold charging trajectories and complete reset discharge back to 0V.
+- **LIF Core ($M_1 - M_2$, $M_{P1}-M_{P2}$, $M_{N1}-M_{N2}$, $M_{PF}, M_{NF}, M_{PW}, M_{NW}, M_{PO}, M_{NO}$)**:
+  - $M_1$: Leak device operated in subthreshold regime via $V_{lk}$.
+  - $M_2$: Membrane reset switch activated by pulse $V_{rst}$.
+  - $M_{P1}, M_{P2}, M_{N1}, M_{N2}, M_{PF}, M_{NF}$: 6-transistor Schmitt trigger setting upper and lower switching thresholds.
+  - $M_{PW}, M_{NW}$: Starved inverter powered by $V_{width}$ setting the refractory reset pulse duration.
+- **OTA Core ($M_1 - M_{11}$)**:
+  - Differential pair ($M_6, M_7$) biased by tail current source $M_8$ ($V_c$).
+  - Current mirrors ($M_1-M_3, M_9-M_{10}$) transferring current difference $I_w = I(M_7) - I(M_6)$ onto $C_w$.
+  - Gated sampling switches ($M_4, M_{11}$) enabled by pre/post spike pulses.
 
 ---
 
-### 2. Auditory Stimulation & Neural Encoding
+## 1. Baseline LIF Neuron (180nm @ 1.8V & 1.0V)
 
-The auditory stimulus models acoustic tone bursts, intensity dynamics, and envelope modulation via behavioral current injection:
+The baseline LIF neuron integrates incoming current on membrane capacitor $C_m = 300\text{ nF}$ via input resistor $R_{in} = 910\text{ k}\Omega$. Transistors are sized with $W_N = 250\text{ nm}, L_N = 200\text{ nm}$ for NMOS and $W_P = 400\text{ nm}, L_P = 200\text{ nm}$ for PMOS.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>LTspice Schematic (<code>LIF_R2_fig10.asc</code>)</b></td>
+      <td align="center"><b>Simulated Spiking Waveforms (<code>LIF_R2_fig10.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/01_lif_baseline_sch.png" width="460" alt="LIF Baseline Schematic"/></td>
+      <td><img src="assets/01_lif_baseline_plot.png" width="460" alt="LIF Baseline Simulation Output"/></td>
+    </tr>
+  </table>
+  <p><em>Top: Spikes <code>V(spike)</code>; Middle: Stepped input pulse <code>V(vin)</code> ∈ {2.7V, 3.6V, 4.5V}; Bottom: Membrane voltage <code>V(vm)</code> exhibiting steady integrate-fire-reset cycles.</em></p>
+</div>
+
+### Key Baseline Observations:
+- **Hysteresis Window**: The Schmitt trigger creates clean transitions without multi-trigger oscillations.
+- **Rate Coding**: Higher $V_{in}$ amplitudes pump more current into $C_m$, steepening the membrane integration slope and linearly increasing spike frequency.
+
+---
+
+## 2. Auditory Feature Extraction & Neural Coding
+
+To validate the neuron in realistic bio-signal processing applications, a mathematical cochlear hair-cell model is integrated via [`auditory_stim.inc`](ltspice/02_auditory/auditory_stim.inc):
 
 $$I_{in}(t) = \pi \cdot I_M \cdot \text{burst}(t, T_0, \text{DUR}, T_R) \cdot \max\bigl(\sin(2\pi f_c t), 0\bigr)$$
 
-#### Toneburst Response ($1\text{ kHz}$ Burst, $50\text{ ms}$)
-A 50ms tone burst ($f_c = 1\text{ kHz}$, $I_M = 3\ \mu\text{A}$) injected into an auditory-scaled membrane ($C_m = 10\text{ nF}$):
-
-| Schematic (`LIF_R3_S1_toneburst.asc`) | Waveforms (`LIF_R3_S1_toneburst.raw`) |
-| :---: | :---: |
-| ![Toneburst Schematic](assets/02_auditory_toneburst_sch.png) | ![Toneburst Waveforms](assets/02_auditory_toneburst_plot.png) |
-
-- Immediate acoustic onset detection.
-- Continuous action potential generation through the burst window ($28\text{ ms} - 70\text{ ms}$).
-- Complete cessation of firing upon tone termination.
-
-#### Rate-Level Dynamic Range (10-Step Intensity Sweep)
-Input amplitude $I_M$ stepped across 10 levels from $1.0\ \mu\text{A}$ to $8.0\ \mu\text{A}$:
-
-| Schematic (`LIF_R3_S5_rate_level.asc`) | Waveforms (`LIF_R3_S5_rate_level.raw`) |
-| :---: | :---: |
-| ![Rate-Level Schematic](assets/03_auditory_rate_level_sch.png) | ![Rate-Level 10-Step Plot](assets/03_auditory_rate_level_plot.png) |
-
-- Monotonic relationship between input current amplitude and output spike count.
-- Dynamic range captures biological rate-level coding without saturation across the tested acoustic current span.
-
-#### Amplitude Modulation (AM) Phase-Locking
-Envelope modulation frequency swept across $f_m \in \{5, 10, 20, 40\}\text{ Hz}$ on a $1\text{ kHz}$ carrier:
-
-| Schematic (`LIF_R3_S4_AM.asc`) | Waveforms (`LIF_R3_S4_AM.raw`) |
-| :---: | :---: |
-| ![AM Schematic](assets/04_auditory_am_sch.png) | ![AM Multi-Frequency Plot](assets/04_auditory_am_plot.png) |
-
-- The neuron phase-locks its spiking bursts to the crest of each modulation period.
-- Inter-burst silent intervals correspond to envelope troughs, replicating mammalian auditory nerve phase tracking.
+where:
+- $\text{burst}(t)$ imposes raised-cosine attack and decay ramps ($T_R = 5\text{ ms}$) on a pulse duration $\text{DUR}$.
+- $\max(\sin(2\pi f_c t), 0)$ models the half-wave rectification (HWR) performed by inner hair cells at carrier frequency $f_c = 1\text{ kHz}$.
+- $C_m$ is adjusted to $10\text{ nF}$ to match biological acoustic timescales.
 
 ---
 
-### 3. Spike-Timing-Dependent Plasticity (STDP)
+### 2.1 Toneburst Response (50ms @ 1kHz)
 
-The STDP synapse updates synaptic weight voltage $V_w$ on $C_w = 30\text{ nF}$ as a function of the relative arrival time $\Delta t = t_{post} - t_{pre}$:
+Driving the neuron with a $50\text{ ms}$ toneburst ($I_M = 3\ \mu\text{A}$) demonstrates immediate phase-locked acoustic firing followed by silence upon burst termination.
 
-| Schematic (`STDP_R2_fig14.asc`) | Waveforms (`STDP_R2_fig14.raw`) |
-| :---: | :---: |
-| ![STDP Schematic](assets/05_stdp_sch.png) | ![STDP Learning Waveforms](assets/05_stdp_plot.png) |
-
-- **Top Trace ($V_{vw}$)**: Synaptic weight across 14 timing intervals spanning $-150\text{ ms} \le \Delta t \le +50\text{ ms}$.
-  - When $\Delta t > 0$ (pre fires before post): OTA $U_1$ injects charge $\to$ **Long-Term Potentiation (LTP)**.
-  - When $\Delta t < 0$ (post fires before pre): OTA $U_2$ sinks charge $\to$ **Long-Term Depression (LTD)**.
-- **Middle Trace ($V_{c1}$)**: Pre-synaptic exponential decaying trace on $C_1 = 2.2\text{ nF}$.
-- **Bottom Trace ($V_{c2}$)**: Post-synaptic exponential decaying trace on $C_2 = 2.2\text{ nF}$.
-
----
-
-### 4. Low-Voltage Subthreshold Optimization (0.6V Operation)
-
-Scaling $V_{DD}$ down to **0.6 V** (near $V_{th}$) introduces two failure mechanisms:
-1. Schmitt trigger hysteresis window collapse caused by DIBL and subthreshold channel leakage.
-2. Incomplete membrane reset caused by exponential loss of $V_{GS}$ overdrive on the reset switch $M_2$.
-
-**Circuit Modifications:**
-- **$L_{Schmitt} = 400\text{ nm}$ ($2\times$ channel length)** on $M_{P1}, M_{P2}, M_{N1}, M_{N2}, M_{PF}, M_{NF}$ to suppress short-channel leakage and re-establish a stable hysteresis window.
-- **$W_{M2} = 4.0\ \mu\text{m}$ ($16\times$ channel width)** to guarantee low on-resistance and complete membrane discharge during the brief reset pulse.
-- **$C_m = 25.3\text{ nF}$** to maintain biological integration time constants.
-
-| Optimized Schematic (`LIF_R6_S1_toneburst.asc`) | 0.6V Waveforms (`LIF_R6_S1_toneburst.raw`) |
-| :---: | :---: |
-| ![0.6V Schematic](assets/06_optimized_0v6_sch.png) | ![0.6V Waveforms](assets/06_optimized_0v6_plot.png) |
-
-- Clean rail-to-rail $600\text{ mV}$ action potentials under auditory tone burst stimulus.
-- Subthreshold membrane integration oscillating stably between $160\text{ mV}$ and $360\text{ mV}$.
-- **$>85\%$ total dynamic and static power reduction** compared to 1.8V nominal operation.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Toneburst Schematic (<code>LIF_R3_S1_toneburst.asc</code>)</b></td>
+      <td align="center"><b>Toneburst Waveforms (<code>LIF_R3_S1_toneburst.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/02_auditory_toneburst_sch.png" width="460" alt="Toneburst Schematic"/></td>
+      <td><img src="assets/02_auditory_toneburst_plot.png" width="460" alt="Toneburst Plot"/></td>
+    </tr>
+  </table>
+  <p><em>Top: Rectified auditory input current <code>I(Bin)</code>; Middle: Membrane potential <code>V(vm)</code>; Bottom: Action potentials <code>V(spike)</code>.</em></p>
+</div>
 
 ---
 
-## Physical Layout (Electric VLSI)
+### 2.2 Rate-Level Dynamic Range (Intensity Sweep)
 
-Layouts were drawn in **Electric VLSI 9.08** using MOSIS scalable CMOS (`mocmos`) rules (submicron, 2-metal layers, n-well). The library is located in [`layout/ISE3_layout.jelib`](layout/ISE3_layout.jelib).
+To determine the neuron's input dynamic range, the acoustic amplitude $I_M$ was swept over 10 values from $1.0\ \mu\text{A}$ to $8.0\ \mu\text{A}$ ($\text{DUR} = 100\text{ ms}$).
 
-| Full STDP Synapse (Hierarchical) | LIF Spiking Neuron Core |
-| :---: | :---: |
-| ![STDP Synapse Layout](assets/layout_STDP.svg) | ![LIF Neuron Layout](assets/layout_LIF.svg) |
-| **Operational Transconductance Amplifier (OTA)** | **Dual Exponential Trace Generator (TRACE)** |
-| ![OTA Layout](assets/layout_OTA.svg) | ![TRACE Layout](assets/layout_TRACE.svg) |
-
-### Layout Characteristics
-- **DRC / ERC Clean**: Continuous substrate and well taps prevent latchup across subthreshold operational states.
-- **Hierarchical Layout**: Inverter cell $\to$ `OTA` (11T) + `TRACE` (10T) subcells $\to$ Top-level `STDP` synapse.
-- **Transistor Geometries**: Multi-finger diffusions employed for wide devices (e.g. $4\ \mu\text{m}$ reset switch $M_2$) to minimize drain junction capacitance.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Rate-Level Schematic (<code>LIF_R3_S5_rate_level.asc</code>)</b></td>
+      <td align="center"><b>10-Level Stepped Firing Rate (<code>LIF_R3_S5_rate_level.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/03_auditory_rate_level_sch.png" width="460" alt="Rate Level Schematic"/></td>
+      <td><img src="assets/03_auditory_rate_level_plot.png" width="460" alt="Rate Level 10-Step Plot"/></td>
+    </tr>
+  </table>
+  <p><em>Color-coded response across 10 input levels (1µA to 8µA) demonstrating clear monotonic firing rate scaling.</em></p>
+</div>
 
 ---
 
-## Repository Map
+### 2.3 Amplitude Modulation (AM) Phase-Locking
+
+Acoustic communication heavily relies on low-frequency envelope modulation. The neuron was stimulated with an AM envelope:
+
+$$I_{in}(t) = \pi \cdot I_M \cdot 0.5 \cdot \bigl(1 - \cos(2\pi f_m t)\bigr) \cdot \max\bigl(\sin(2\pi f_c t), 0\bigr)$$
+
+sweeping modulation frequency $f_m \in \{5, 10, 20, 40\}\text{ Hz}$.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>AM Modulation Schematic (<code>LIF_R3_S4_AM.asc</code>)</b></td>
+      <td align="center"><b>Phase-Locked Spiking (<code>LIF_R3_S4_AM.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/04_auditory_am_sch.png" width="460" alt="AM Schematic"/></td>
+      <td><img src="assets/04_auditory_am_plot.png" width="460" alt="AM Plot across 4 frequencies"/></td>
+    </tr>
+  </table>
+  <p><em>Multi-run plot across 600ms showing neural spikes faithfully phase-locking to envelope peaks for each modulation frequency.</em></p>
+</div>
+
+---
+
+## 3. Spike-Timing-Dependent Plasticity (STDP) Learning Synapse
+
+Synaptic weight adaptation follows biological Hebbian STDP:
+- **Long-Term Potentiation (LTP)**: When the pre-synaptic neuron fires before the post-synaptic neuron ($\Delta t > 0$), synaptic weight $V_w$ increases.
+- **Long-Term Depression (LTD)**: When post fires before pre ($\Delta t < 0$), $V_w$ decreases.
+
+The circuit utilizes:
+- Pre-synaptic trace on $C_1 = 2.2\text{ nF}$ decayed by NMOS $M_2$ ($V_{\tau,pre} = 0.31\text{ V}$).
+- Post-synaptic trace on $C_2 = 2.2\text{ nF}$ decayed by NMOS $M_4$ ($V_{\tau,post} = 0.35\text{ V}$).
+- Two 11T OTA blocks ($U_1, U_2$) sampling the traces and sourcing/sinking current onto weight capacitor $C_w = 30\text{ nF}$.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>STDP Schematic (<code>STDP_R2_fig14.asc</code>)</b></td>
+      <td align="center"><b>Trace Decay & Weight Update (<code>STDP_R2_fig14.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/05_stdp_sch.png" width="460" alt="STDP Schematic"/></td>
+      <td><img src="assets/05_stdp_plot.png" width="460" alt="STDP Simulation Output"/></td>
+    </tr>
+  </table>
+  <p><em>Top: Weight potential <code>V(vw)</code> showing bidirectional weight change across 14 timing intervals; Middle: Pre trace <code>V(c1)</code>; Bottom: Post trace <code>V(c2)</code>.</em></p>
+</div>
+
+### STDP Parameter Sweeps:
+$$\Delta t \in \{-150\text{ms}, -100\text{ms}, -60\text{ms}, -40\text{ms}, -20\text{ms}, -12\text{ms}, -2\text{ms}, +2\text{ms}, +7\text{ms}, +10\text{ms}, +20\text{ms}, +30\text{ms}, +40\text{ms}, +50\text{ms}\}$$
+
+The resulting trajectory reproduces the asymmetric exponential learning window characteristic of biological synapses.
+
+---
+
+## 4. Low-Voltage Optimization (0.6V Ultra-Low Power)
+
+Standard subthreshold circuits suffer severe degradation when supply voltage drops near $V_{th}$. To operate the neuron reliably at **$V_{DD} = 0.6\text{ V}$** (a **67% reduction** in supply voltage and an order-of-magnitude reduction in static power):
+
+1. **Doubled Schmitt Trigger Length ($L_{SN} = L_{SP} = 400\text{ nm}$)**: Mitigates drain-induced barrier lowering (DIBL) and stabilizes subthreshold hysteresis thresholds.
+2. **$16\times$ Wided Reset Transistor ($W_{M2} = 4.0\ \mu\text{m}$)**: Compensates for exponentially reduced gate overdrive at $0.6\text{ V}$, ensuring complete membrane discharge within the refractory window.
+3. **Scaled Membrane Capacitance ($C_m = 25.3\text{ nF}$)**: Tuned to maintain biological integration time constants.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Optimized 0.6V Schematic (<code>LIF_R6_S1_toneburst.asc</code>)</b></td>
+      <td align="center"><b>0.6V Spiking Waveforms (<code>LIF_R6_S1_toneburst.raw</code>)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/06_optimized_0v6_sch.png" width="460" alt="0.6V Optimized Schematic"/></td>
+      <td><img src="assets/06_optimized_0v6_plot.png" width="460" alt="0.6V Optimized Plot"/></td>
+    </tr>
+  </table>
+  <p><em>Robust rail-to-rail 600mV action potentials under auditory toneburst stimulus with subthreshold membrane oscillation between 160mV and 360mV.</em></p>
+</div>
+
+---
+
+## 5. Technology Scaling (180nm → 90nm → 65nm)
+
+The designs were re-targeted and benchmarked across three process generations using BSIM3v3 Predictive Technology Models (PTM):
+
+| Technology Node | Channel Length ($L_{min}$) | Model Library | Supply Range | Status |
+|:---:|:---:|:---:|:---:|:---:|
+| **180nm Bulk** | $200\text{ nm}$ | `180nm_bulk_LTspice_fixed.lib` | $1.8\text{ V} \to 0.6\text{ V}$ | Baseline & Optimization Verified |
+| **90nm Bulk** | $90\text{ nm}$ | `ptm90_LTspice.lib` | $1.2\text{ V} \to 0.9\text{ V}$ | Functional & Benchmarked |
+| **65nm Bulk** | $65\text{ nm}$ | `ptm65_LTspice.lib` | $1.0\text{ V} \to 0.7\text{ V}$ | Scaled Core Verified |
+
+---
+
+## 6. Physical Layout Gallery (Electric VLSI)
+
+All physical layouts were implemented in **Electric VLSI 9.08** using MOSIS submicron CMOS design rules (`mocmos`). The design library is stored in [`layout/ISE3_layout.jelib`](layout/ISE3_layout.jelib).
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Full STDP Synapse Layout (Hierarchical)</b></td>
+      <td align="center"><b>LIF Spiking Neuron Layout</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/layout_STDP.svg" width="460" alt="STDP Layout"/></td>
+      <td><img src="assets/layout_LIF.svg" width="460" alt="LIF Layout"/></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Operational Transconductance Amplifier (OTA)</b></td>
+      <td align="center"><b>Dual Trace Generator (TRACE)</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/layout_OTA.svg" width="460" alt="OTA Layout"/></td>
+      <td><img src="assets/layout_TRACE.svg" width="460" alt="TRACE Layout"/></td>
+    </tr>
+  </table>
+</div>
+
+### Layout Highlights:
+- **Clean DRC/ERC**: Verified against MOSIS scalable rules with continuous guard rings and substrate taps.
+- **Hierarchical Construction**: Basic `inv` cell $\to$ `OTA` & `TRACE` blocks $\to$ Top-level `STDP` synapse.
+- **Parasitic Minimization**: Multi-finger diffusions used for wide transistors ($M_2$ reset switch).
+
+---
+
+## 📂 Repository Structure
 
 ```
+.
 ├── .gitignore                         # Excludes large (>100MB) transient simulation binaries
-├── LICENSE                            # MIT License
-├── README.md                          # Technical report & documentation
-├── assets/                            # Vector SVGs, schematics, and simulation plots
+├── README.md                          # Comprehensive documentation
+├── assets/                            # Schematics, waveform plots, and layout figures
 │   ├── circuit_schematics_paper.png
 │   ├── 01_lif_baseline_sch.png / 01_lif_baseline_plot.png
 │   ├── 02_auditory_toneburst_sch.png / 02_auditory_toneburst_plot.png
@@ -212,48 +336,50 @@ Layouts were drawn in **Electric VLSI 9.08** using MOSIS scalable CMOS (`mocmos`
 │   ├── 04_auditory_am_sch.png / 04_auditory_am_plot.png
 │   ├── 05_stdp_sch.png / 05_stdp_plot.png
 │   ├── 06_optimized_0v6_sch.png / 06_optimized_0v6_plot.png
-│   └── layout_LIF.svg / layout_OTA.svg / layout_STDP.svg / layout_TRACE.svg
-├── layout/                            # Electric VLSI database
-│   ├── ISE3_layout.jelib             # 5-cell layout library
-│   └── figures/                       # Vector SVGs and PNG renderings
+│   └── layout_LIF.png / layout_OTA.png / layout_STDP.png / layout_TRACE.png
+├── layout/                            # Electric VLSI layout files
+│   ├── ISE3_layout.jelib             # Electric VLSI library containing 5 cells
+│   └── figures/                       # Vector (SVG) and high-res layout renderings
 ├── models/                            # Transistor model libraries
-│   ├── 180nm_bulk_LTspice_fixed.lib  # 180nm BSIM3v3 PTM
-│   └── ptm/                          # 90nm and 65nm PTM model decks
-└── ltspice/                           # Simulation suites
-    ├── 01_LIF_baseline/              # Baseline characterizations (Figs 10, 11a, 11b, 15)
-    ├── 02_auditory/                  # Auditory stimuli (toneburst, sustained, gap, AM, rate-level)
+│   ├── 180nm_bulk_LTspice_fixed.lib  # 180nm BSIM3v3 PTM model
+│   └── ptm/                          # 90nm and 65nm PTM libraries
+└── ltspice/                           # LTspice simulation suites
+    ├── 01_LIF_baseline/              # Fig 10, 11a, 11b, 15 baseline characterizations
+    ├── 02_auditory/                  # S1 (toneburst), S2 (sustained), S3 (gap), S4 (AM), S5 (rate-level)
     ├── 03_PartC_optimization/        # 0.6V ultra-low voltage optimization testbenches
-    ├── 04_STDP/                      # OTA DC sweeps & STDP learning curve sweeps
-    └── 06_PartB/                     # Scaled technology implementations (65nm & 90nm)
+    ├── 04_STDP/                      # OTA characterization & Fig 14 STDP learning sweeps
+    └── 06_PartB/                     # Scaled technology runs (65nm and 90nm)
 ```
 
 ---
 
-## Simulation Execution
+## 🚀 Quick Start: Simulation & Reproduction
 
 ### Prerequisites
-- [LTspice XVII / 24](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)
-- [Electric VLSI 9.08](https://www.gnu.org/software/electric/) (requires Java runtime)
+- **LTspice**: Download and install from [Analog Devices](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html).
+- **Electric VLSI**: Download version 9.08 from [GNU Electric](https://www.gnu.org/software/electric/).
 
-### Running Schematics
-```bash
-git clone https://github.com/anujgite10-10/subthreshold-neuromorphic-lif-stdp.git
-cd subthreshold-neuromorphic-lif-stdp
-```
-
-Open any `.asc` file in LTspice and run the transient simulation (`Run`). Waveform settings automatically load from companion `.plt` files:
-
-- **Baseline 1.8V LIF**: `ltspice/01_LIF_baseline/LIF_R2_fig10.asc`
-- **Auditory Toneburst**: `ltspice/02_auditory/LIF_R3_S1_toneburst.asc`
-- **Rate-Level Sweep**: `ltspice/02_auditory/LIF_R3_S5_rate_level.asc`
-- **AM Tracking**: `ltspice/02_auditory/LIF_R3_S4_AM.asc`
-- **STDP Learning Curve**: `ltspice/04_STDP/STDP_R2_fig14.asc`
-- **0.6V Low-Voltage LIF**: `ltspice/03_PartC_optimization/LIF_R6_S1_toneburst.asc`
+### Running Simulations
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/anujgite10-10/subthreshold-neuromorphic-lif-stdp.git
+   cd subthreshold-neuromorphic-lif-stdp
+   ```
+2. Open any `.asc` file directly in LTspice (e.g. `ltspice/02_auditory/LIF_R3_S1_toneburst.asc`).
+3. Click the **Running Man (Simulate)** icon.
+4. LTspice will automatically load the matching `.plt` configuration to restore all signal traces.
 
 ---
 
-## References
+## 📚 References
 
-1. M. Yang, et al., *"Design and Analysis of an Ultra-Low-Power CMOS Spiking Neuron and STDP Synapse for Neuromorphic Applications,"* **IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED)**, 2021.
-2. Nanoscale Integration and Modeling (NIMO) Group, *"Predictive Technology Model (PTM),"* Arizona State University ([ptm.asu.edu](https://ptm.asu.edu)).
-3. S. M. Rubin, *"Electric VLSI Design System,"* Version 9.08, GNU Free Software Directory.
+1. **M. Yang, et al.**, *"Design and Analysis of an Ultra-Low-Power CMOS Spiking Neuron and STDP Synapse for Neuromorphic Applications,"* **IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED)**, 2021.
+2. **Predictive Technology Model (PTM)**, Nanoscale Integration and Modeling (NIMO) Group, Arizona State University ([ptm.asu.edu](https://ptm.asu.edu)).
+3. **Electric VLSI Design System**, Version 9.08, GNU Software Foundation.
+
+---
+
+<div align="center">
+  <b>Developed for Advanced Neuromorphic VLSI Research</b>
+</div>
+
