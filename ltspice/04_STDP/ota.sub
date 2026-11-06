@@ -1,0 +1,24 @@
+* Transconductance amplifier - Yang et al., ISLPED 2021, Fig. 6 (transistor-for-transistor)
+* Pins: inn inp bias gate vc w vdd   (gnd = node 0)
+* Enabled when bias = high and gate = low; then I(w out) = I(M7) - I(M6)
+* Sizes: unit devices from Sec. III-B (WN/LN, WP/LP set by the testbench .param)
+* Internal nets: a = M2 diode (M6 drain), b = M3 diode (M7 drain, M5 gate),
+*                c = M9 diode (M1 drain, M10 gate), tail = diff-pair source
+* Bulk choice (not drawn in the paper): NMOS -> 0, PMOS -> vdd
+.subckt OTA inn inp bias gate vc w vdd
+* differential pair and tail (Vc sets the tail current)
+M6   a    inn  tail 0    NMOS180 W={WN} L={LN}
+M7   b    inp  tail 0    NMOS180 W={WN} L={LN}
+M8   tail vc   0    0    NMOS180 W={WN} L={LN}
+* mirror M2 -> M1 -> M9 -> M10: output sinks I(M6)
+M2   a    a    vdd  vdd  PMOS180 W={WP} L={LP}
+M1   c    a    vdd  vdd  PMOS180 W={WP} L={LP}
+M9   c    c    0    0    NMOS180 W={WN} L={LN}
+M10  w    c    0    0    NMOS180 W={WN} L={LN}
+* mirror M3 -> M5: output sources I(M7)
+M3   b    b    vdd  vdd  PMOS180 W={WP} L={LP}
+M5   w    b    vdd  vdd  PMOS180 W={WP} L={LP}
+* enable switches: bias low -> M4 pulls b to vdd (M5 off); gate high -> M11 pulls c to 0 (M10 off)
+M4   b    bias vdd  vdd  PMOS180 W={WP} L={LP}
+M11  c    gate 0    0    NMOS180 W={WN} L={LN}
+.ends OTA
