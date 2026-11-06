@@ -1,6 +1,6 @@
 <div align="center">
 
-# Neuromorphic Analog VLSI: Leaky Integrate-and-Fire (LIF) Neuron & STDP Learning Synapse
+# Neuromorphic VLSI: Leaky Integrate-and-Fire (LIF) Neuron & STDP Learning Synapse
 
 ### Sub-Threshold CMOS Neuromorphic Processing Unit with Bio-Inspired Auditory Feature Extraction, STDP Synaptic Plasticity, Technology Scaling (180nm / 90nm / 65nm), Ultra-Low Voltage (0.6V) Optimization, and Full Custom Electric VLSI Layout
 
@@ -45,6 +45,56 @@ This repository presents the end-to-end design, SPICE modeling, auditory validat
 4. **0.6V Subthreshold Optimization**: Successfully scales supply voltage down by $3\times$ (from $1.8\text{ V}$ down to $0.6\text{ V}$) through deliberate transistor geometry optimization ($L_{Schmitt} = 400\text{ nm}$, $W_{Reset} = 4\ \mu\text{m}$).
 5. **Multi-Node Technology Scaling**: Validated on BSIM3v3 Predictive Technology Models (PTM) across **180nm**, **90nm**, and **65nm** nodes.
 6. **Full Custom CMOS Layout**: Complete hierarchical layout created in **Electric VLSI** adhering to MOSIS scalable CMOS (`mocmos`) design rules.
+
+### 🔄 End-to-End Neuromorphic Signal Pipeline
+
+```mermaid
+flowchart TB
+    subgraph AUD["🎧 Bio-Inspired Auditory Front-End (Cochlear Model)"]
+        Stim["Acoustic Stimulus (Toneburst / AM Envelope)"]
+        HWR["Inner Hair Cell Model: max(sin 2π·fc·t, 0)"]
+        RC["Raised-Cosine Envelope Shaping (TR = 5ms)"]
+        Iin["Auditory Synaptic Current I_in(t)"]
+        Stim --> HWR --> RC --> Iin
+    end
+
+    subgraph LIF["⚡ 12-Transistor Leaky Integrate-and-Fire (LIF) Neuron"]
+        MemNode["Membrane Node vm (Capacitor Cm)"]
+        Leak["Subthreshold Leak M1 (Gate = Vlk)"]
+        ST["6T Schmitt Trigger with Hysteresis (MPF, MNF)"]
+        Vo["Internal Inverted Node vo"]
+        PW["Starved Reset Inverter (MPW, MNW, Gate = Vwidth)"]
+        OutInv["Output Buffer Inverter (MPO, MNO)"]
+        ResetSwitch["NMOS Reset Switch M2"]
+        SpikeOut["Action Potential Output (spike)"]
+
+        MemNode --> ST
+        ST --> Vo
+        Vo --> PW
+        Vo --> OutInv
+        PW -->|"vrst reset pulse"| ResetSwitch
+        ResetSwitch -.->|"Refractory discharge"| MemNode
+        Leak -.->|"Subthreshold leak"| MemNode
+        OutInv --> SpikeOut
+    end
+
+    subgraph STDP_BLOCK["🧠 STDP Synaptic Learning Block"]
+        PreTrace["Pre-Synaptic Trace C1 (Decay via Vtau,pre)"]
+        PostTrace["Post-Synaptic Trace C2 (Decay via Vtau,post)"]
+        OTA1["OTA U1 (11T): Sampled on Post-Spike"]
+        OTA2["OTA U2 (11T): Sampled on Pre-Spike"]
+        WeightCap["Synaptic Weight Capacitor Cw (Vw)"]
+
+        PreTrace --> OTA1
+        PostTrace --> OTA2
+        OTA1 -->|"+Δw (LTP: Pre before Post)"| WeightCap
+        OTA2 -->|"-Δw (LTD: Post before Pre)"| WeightCap
+    end
+
+    Iin --> MemNode
+    SpikeOut -.->|"Pre-spike pulse"| PreTrace
+    SpikeOut -.->|"Post-spike pulse"| PostTrace
+```
 
 ---
 
