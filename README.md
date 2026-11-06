@@ -360,8 +360,8 @@ All physical layouts were implemented in **Electric VLSI 9.08** using MOSIS subm
 ### Running Simulations
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+   git clone https://github.com/anujgite10-10/subthreshold-neuromorphic-lif-stdp.git
+   cd subthreshold-neuromorphic-lif-stdp
    ```
 2. Open any `.asc` file directly in LTspice (e.g. `ltspice/02_auditory/LIF_R3_S1_toneburst.asc`).
 3. Click the **Running Man (Simulate)** icon.
