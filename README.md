@@ -6,12 +6,15 @@
 
 ![STDP Physical Layout Banner](assets/layout_STDP.svg)
 
-  <code>⚡ LTspice</code> &nbsp;│&nbsp;
-  <code>📐 Electric VLSI 9.08</code> &nbsp;│&nbsp;
-  <code>🔬 PTM [180 / 90 / 65nm]</code> &nbsp;│&nbsp;
-  <code>🔋 VDD [1.8 / 1.0 / 0.6V]</code> &nbsp;│&nbsp;
-  <code>📜 MIT</code>
+<p align="center">
+  <code>⚡ Simulator: LTspice</code> &nbsp;•&nbsp;
+  <code>📐 EDA: Electric VLSI 9.08</code> &nbsp;•&nbsp;
+  <code>🔬 Process: 180nm / 90nm / 65nm PTM</code> &nbsp;•&nbsp;
+  <code>🔋 Supply: 1.8V | 1.0V | 0.6V</code> &nbsp;•&nbsp;
+  <code>📜 License: MIT</code>
 </p>
+
+</div>
 
 ---
 
